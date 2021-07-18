@@ -17,6 +17,11 @@ export class ArtistOverviewComponent implements OnInit {
   }
 
   private initArtists() {
-    this.artists = this.artistService.getArtists();
+    this.artistService
+      .getArtists()
+      .subscribe(artists => {
+        this.artists = artists
+        console.log(this.artists)
+      });
   }
 }

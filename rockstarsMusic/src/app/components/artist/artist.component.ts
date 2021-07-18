@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {Artist} from "../../../services/artist.interfaces";
 
 @Component({
@@ -7,7 +7,7 @@ import {Artist} from "../../../services/artist.interfaces";
   styleUrls: ['./artist.component.css']
 })
 export class ArtistComponent {
-  @Input() artist: Artist;
+  @Input() artist: Artist | undefined;
 
   constructor() { }
 
