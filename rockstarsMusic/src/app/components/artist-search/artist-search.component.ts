@@ -8,13 +8,18 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 export class ArtistSearchComponent implements OnInit {
   @ViewChild('searchInput') searchInput: ElementRef;
   @ViewChild('submitButton') submitButton: ElementRef;
-  constructor() { }
+  constructor() {}
+
+  searchedInput: string;
 
   ngOnInit(): void {
+
   }
 
-  searchArtist(searchedValue: string): void {
-
+  searchArtist(): void {
+    // @ts-ignore
+    this.searchedInput = document.getElementById("searchInput").value;
+    console.log(this.searchedInput);
   }
 
 
