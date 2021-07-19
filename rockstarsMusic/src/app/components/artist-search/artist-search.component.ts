@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, OnInit, Output, ViewChild, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-artist-search',
@@ -6,10 +6,11 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
   styleUrls: ['./artist-search.component.css']
 })
 export class ArtistSearchComponent implements OnInit {
+  @Output() onSearchArtist = new EventEmitter<string>();
+
   @ViewChild('searchInput') searchInput: ElementRef;
   @ViewChild('submitButton') submitButton: ElementRef;
   constructor() {}
-
   searchedInput: string;
 
   ngOnInit(): void {
@@ -19,7 +20,7 @@ export class ArtistSearchComponent implements OnInit {
   searchArtist(): void {
     // @ts-ignore
     this.searchedInput = document.getElementById("searchInput").value;
-    console.log(this.searchedInput);
+    this.onSearchArtist.emit(this.searchedInput);
   }
 
 

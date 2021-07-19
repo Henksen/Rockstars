@@ -23,4 +23,8 @@ export class ArtistOverviewComponent implements OnInit {
           this.artists = artists;
       });
   }
+
+  onSearchArtist(searchedArtist: string) {
+    console.log('searching for' +searchedArtist);
+  }
 }
