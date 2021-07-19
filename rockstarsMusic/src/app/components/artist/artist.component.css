@@ -1,0 +1,19 @@
+.artist {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  min-width: 90px;
+}
+
+.artist_detail {
+  font-style: italic;
+  align-self: flex-end;
+
+}
+.artist_id {
+  font-style: italic;
+}
+
+.artist_name {
+  align-self: flex-start;
+}
