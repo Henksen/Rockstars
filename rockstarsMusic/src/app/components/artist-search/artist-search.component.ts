@@ -12,4 +12,9 @@ export class ArtistSearchComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  searchArtist(searchedValue: string): void {
+
+  }
+
+
 }
