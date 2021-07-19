@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ArtistService} from "../../../services/artist.service";
-import {Artists} from "../../../services/artist.interfaces";
+import {Artist, Artists} from "../../../services/artist.interfaces";
 
 @Component({
   selector: 'app-artist-overview',
@@ -10,7 +10,7 @@ import {Artists} from "../../../services/artist.interfaces";
 export class ArtistOverviewComponent implements OnInit {
 
   constructor(private artistService: ArtistService) { }
-  artists: Artists;
+  artists: Artist[];
 
   ngOnInit(): void {
     this.initArtists();
@@ -21,7 +21,6 @@ export class ArtistOverviewComponent implements OnInit {
       .getArtists()
       .subscribe(artists => {
           this.artists = artists;
-        console.log(this.artists)
       });
   }
 }
