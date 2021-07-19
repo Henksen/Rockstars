@@ -7,7 +7,7 @@ import {Artist} from "../../../services/artist.interfaces";
   styleUrls: ['./artist.component.css']
 })
 export class ArtistComponent {
-  @Input() artist: Artist | undefined;
+  @Input() artist: Artist;
 
   constructor() { }
 

@@ -20,7 +20,7 @@ export class ArtistOverviewComponent implements OnInit {
     this.artistService
       .getArtists()
       .subscribe(artists => {
-        this.artists = artists
+          this.artists = artists;
         console.log(this.artists)
       });
   }
