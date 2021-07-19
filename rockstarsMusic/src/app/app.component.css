@@ -2,3 +2,9 @@
   max-width: 40%;
   height: auto;
 }
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

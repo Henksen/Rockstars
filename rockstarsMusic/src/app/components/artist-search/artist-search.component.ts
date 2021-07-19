@@ -22,6 +22,4 @@ export class ArtistSearchComponent implements OnInit {
     this.searchedInput = document.getElementById("searchInput").value;
     this.onSearchArtist.emit(this.searchedInput);
   }
-
-
 }

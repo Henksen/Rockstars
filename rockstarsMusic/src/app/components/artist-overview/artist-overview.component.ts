@@ -25,6 +25,6 @@ export class ArtistOverviewComponent implements OnInit {
   }
 
   onSearchArtist(searchedArtist: string) {
-    console.log('searching for' +searchedArtist);
+    console.log('Searching for the following artist ' + searchedArtist + '. You have great taste!');
   }
 }
